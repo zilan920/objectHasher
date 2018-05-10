@@ -11,6 +11,8 @@
 
     需要指出的是Php的Array本身效率已经很高，其中很多的内部实现都使用了该数据类型，Hash也是工程性能很强的算法。在有更好的方案时，完全没有必要再自己动手写轮子。
 
+    另外这一方案也是实现全文搜索的一种思路。
+
 > My learning experience
     I met such problem in my working project: We need find a result from a series of parameters ,for example, find a specific data from object {'name' => b}. In our project ,we achieved it by count the md5 of the json encodeed data string as checksum code, and stored it in database. When we need to find the data, just sort the object by specific rule, then select from the database.
 
