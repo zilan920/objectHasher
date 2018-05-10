@@ -38,6 +38,7 @@ class TireTree implements Finder{
             $pathKey = substr((String) $value_k, $i * static::KEY_LENGTH, static::KEY_LENGTH);
             $path .= '['.$pathKey.']';
         }
+        //eval is extremely dangerous ,MUST NOT use later
         return eval('return $this->tireTree'.$path);
     }
 
